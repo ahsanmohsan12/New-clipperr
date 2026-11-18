@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-error-container": "#ffdad6", "secondary-fixed-dim": "#4cd7f6", "surface-container-high": "#282933", "on-primary-container": "#340080", "primary": "#d0bcff", "surface-container-low": "#191b24", "error-container": "#93000a", "primary-fixed-dim": "#d0bcff", "on-background": "#e1e1ef", "on-secondary-fixed": "#001f26", "inverse-on-surface": "#2e303a", "on-primary-fixed": "#23005c", "on-tertiary-container": "#00285d", "inverse-surface": "#e1e1ef", "surface-container": "#1d1f29", "surface-container-lowest": "#0c0e17", "background": "#11131c", "tertiary-fixed-dim": "#adc6ff", "on-surface": "#e1e1ef", "tertiary": "#adc6ff", "on-tertiary-fixed-variant": "#004395", "surface-variant": "#32343e", "on-tertiary": "#002e6a", "on-error": "#690005", "surface": "#11131c", "tertiary-container": "#4d8eff", "secondary-fixed": "#acedff", "surface-tint": "#d0bcff", "on-tertiary-fixed": "#001a42", "on-secondary": "#003640", "secondary": "#4cd7f6", "on-primary": "#3c0091", "tertiary-fixed": "#d8e2ff", "on-secondary-container": "#00424e", "surface-dim": "#11131c", "secondary-container": "#03b5d3", "on-secondary-fixed-variant": "#004e5c", "on-surface-variant": "#cbc3d7", "inverse-primary": "#6d3bd7", "primary-container": "#a078ff", "outline": "#958ea0", "primary-fixed": "#e9ddff", "outline-variant": "#494454", "surface-bright": "#373943", "surface-container-highest": "#32343e", "error": "#ffb4ab", "on-primary-fixed-variant": "#5516be" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-desktop": "2.5rem", "gutter-desktop": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem", "margin-tablet": "1.5rem", "space-xl": "2.25rem", "margin": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1.25rem" }, fontFamily: { "headline-md": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Inter"], "label-md": ["Inter"], "title-md": ["Inter"], "headline-lg": ["Inter"], "headline-sm": ["Inter"], "label-sm": ["Inter"], "display-lg-mobile": ["Inter"], "display-lg": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"] }, fontSize: { "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100vw;min-height:100vh;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col selection:bg-primary selection:text-on-primary"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="relative flex items-center justify-center"><div class="absolute -inset-1 rounded-full bg-primary/20 blur-sm"></div><img alt="ClipForge AI Logo" class="relative h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6wsfWbDgMVNqrrgRxtna7tj8V3bZaiBF2sz1rcHRovFugGahT-iKepBweMJJpzgn2WzYSlDbCZe6k9F1cfKSnGVUW08vh54vhLGmvHPbaZgawaugxPb41ZlKchVSpvS5OWOhRLBFPmU1IHwGBILwnUZnaD5LTs6lCJD86-oxjXSOYbH9ekmlVhV0cUqhh63q3heRzDBZtgbzsW5ZKsvsYMwn1VMcEbxO3FCkDLqRe"/></div><span class="font-title-md text-title-md text-on-surface tracking-tight ml-space-xs">ClipForge AI</span></div><div class="flex items-center gap-space-xs"><button aria-label="Global Settings" class="min-h-[44px] min-w-[44px] flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">tune</span></button><a class="min-h-[44px] min-w-[44px] flex items-center justify-center p-1" data-path="settings-profile" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-white/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4ZDfZq8fKoYHl2nUmf5pCewtHRJEGwIgoSVrJf5EBp_BBExUpIqTY-lWIJUtPRSrGibEIuMyivjntKvd4NceZGySStlONRZ9mxDovaEZDNNrW4CHCz2wWnLhcV0ztavlULNKE75ZgsZkLD3Q_LiSyZtTVopAfhLmVmVMkkz-qknp98oVRDKaD6v4E626V3-eGicrRI2Na3S4C38FjV4n6iiHPTMfCQXp9Js228Qtx"/></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full px-margin pb-24">
+<!-- Celebration Glow Flare -->
+<div class="relative w-full mb-space-md pt-space-xs">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 w-48 h-28 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-1.5 self-start px-space-sm py-0.5 rounded-full bg-surface-container-high text-secondary text-label-sm font-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span>AI Engine Rendering Complete</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Your Shorts Are Ready! 🎉</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Generated 4 high-virality 9:16 Shorts tailored with auto-cut hooks &amp; kinetic typography.</p>
+</div>
+<!-- Primary Global Action Stack -->
+<div class="mt-space-md flex items-center gap-space-sm">
+<button class="relative group flex-1 min-h-[48px] px-space-md rounded-xl bg-gradient-to-r from-primary-container via-secondary-container to-secondary text-on-primary-fixed font-title-md text-title-md flex items-center justify-center gap-2 shadow-lg shadow-primary-container/25 active:scale-[0.98] transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px] font-semibold">folder_zip</span>
+<span>Download All (.ZIP)</span>
+</button>
+<button class="min-h-[48px] px-space-md rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>New</span>
+</button>
+</div>
+</div>
+<!-- Caption Preset Picker -->
+<section class="w-full mb-space-lg">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">subtitles</span>
+<span class="font-label-md text-label-md text-on-surface font-medium">Caption Style Preset</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary-container">Live Synced</span>
+</div>
+<!-- Horizontal Scrolling Chips -->
+<div class="flex items-center gap-space-sm overflow-x-auto no-scrollbar py-1 -mx-margin px-margin">
+<!-- Active 'Dynamic' Preset -->
+<button class="caption-chip active flex-shrink-0 flex items-center gap-2 h-9 px-3.5 rounded-full bg-surface-container-highest text-on-surface shadow-sm ring-1 ring-primary/40 font-label-sm text-label-sm transition-all" type="button">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_#4cd7f6] animate-pulse"></span>
+<span class="font-semibold text-primary">Dynamic Pop</span>
+<span class="text-[10px] px-1 py-0.5 rounded bg-primary/20 text-primary-fixed uppercase tracking-wider font-bold">HOT</span>
+</button>
+<!-- Preset 2: Karaoke -->
+<button class="caption-chip flex-shrink-0 flex items-center gap-1.5 h-9 px-3 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">graphic_eq</span>
+<span>Karaoke Fill</span>
+</button>
+<!-- Preset 3: Highlighted Pop -->
+<button class="caption-chip flex-shrink-0 flex items-center gap-1.5 h-9 px-3 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-yellow-300">flash_on</span>
+<span>Word Highlighter</span>
+</button>
+<!-- Preset 4: Bold Sans -->
+<button class="caption-chip flex-shrink-0 flex items-center gap-1.5 h-9 px-3 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">format_bold</span>
+<span>Bold Punch</span>
+</button>
+<!-- Preset 5: Minimal White -->
+<button class="caption-chip flex-shrink-0 flex items-center gap-1.5 h-9 px-3 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">notes</span>
+<span>Clean Minimal</span>
+</button>
+</div>
+</section>
+<!-- Video Cards List -->
+<section class="flex flex-col gap-space-lg w-full">
+<!-- CARD 1 -->
+<article class="flex flex-col bg-surface-container rounded-3xl p-space-sm shadow-md transition-all">
+<!-- Media Frame with 9:16 vertical ratio -->
+<div class="relative w-full aspect-[9/16] max-h-[460px] rounded-2xl overflow-hidden bg-surface-container-lowest flex items-center justify-center group">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Cinematic 9:16 vertical video frame of an energetic startup founder speaking dynamically into a studio microphone, neon purple backlight and warm rim light, cinematic depth of field with high-energy kinetic yellow and cyan typography overlays floating in front reading 'THE REAL SECRET TO SCALING'." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ8aWeRvTvZn8DKRNNBzO38ffIvDx8LQbZChGHp_VOw3gF4IISjxVG5-8LdGT6zb_XzMLZVO44zL-2KLbxhxJrUJoO8198na3hm5N7I3pVNz6kBK6CxCerMCGfTkTSvS7bfCt--2C03NZAf6A101lb-NLKem7x0blIcPu_L2kNeGHOQFYruYlPhUBkP_ZoLfINX7PYafzXRmKw9gjeDITw6qy8Qab5fuUfQDz7WDLB"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-surface-container-lowest/40 pointer-events-none"></div>
+<!-- Top Badges Row -->
+<div class="absolute top-space-sm inset-x-space-sm flex items-center justify-between z-10">
+<label class="flex items-center gap-1.5 bg-surface-container-lowest/70 backdrop-blur-md px-2.5 py-1 rounded-full cursor-pointer">
+<input checked="" class="short-selector w-4 h-4 rounded accent-primary bg-surface cursor-pointer" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Selected</span>
+</label>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">local_fire_department</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide">97% Viral Potential</span>
+</div>
+</div>
+<!-- Simulated Kinetic Caption in Overlay -->
+<div class="absolute bottom-16 inset-x-4 flex flex-col items-center text-center pointer-events-none z-10">
+<span class="px-2 py-0.5 rounded bg-black/75 text-on-primary-container bg-secondary-fixed text-title-md font-title-md uppercase tracking-tight shadow-md">
+            THE REAL SECRET
+          </span>
+<span class="mt-1 px-3 py-1 rounded bg-black/85 text-primary text-headline-sm font-headline-sm uppercase tracking-wide shadow-md">
+            TO SCALING FAST 🔥
+          </span>
+</div>
+<!-- Play Glassmorphic Button -->
+<button aria-label="Play Short 1" class="absolute z-10 w-14 h-14 rounded-full bg-surface-container/60 backdrop-blur-xl flex items-center justify-center text-on-surface shadow-xl hover:scale-110 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[32px] text-secondary translate-x-0.5" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<!-- Progress Scrub Line -->
+<div class="absolute bottom-0 inset-x-0 h-1 bg-surface-container-high/60 z-10">
+<div class="h-full w-2/5 bg-secondary rounded-full shadow-[0_0_8px_#4cd7f6]"></div>
+</div>
+</div>
+<!-- Card Meta Info -->
+<div class="pt-space-sm px-space-xs flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="min-w-0">
+<h2 class="font-title-md text-title-md text-on-surface truncate">The $10M Mindset Shift</h2>
+<div class="flex items-center gap-2 mt-0.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>0:48
+              </span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant text-[10px] font-medium">1080×1920 HD</span>
+<span>•</span>
+<span class="text-secondary font-medium">Hook: 0.8s</span>
+</div>
+</div>
+<button aria-label="Copy hook text" class="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-xl bg-surface-container-high text-on-surface-variant hover:text-on-surface active:bg-surface-bright transition-colors" title="Copy Hook Prompt" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<!-- Action Row -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<button class="min-h-[44px] rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">visibility</span>
+<span>Preview</span>
+</button>
+<button class="min-h-[44px] rounded-xl bg-primary-container hover:bg-primary-container/90 text-on-primary-fixed font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-md shadow-primary-container/20 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download Short</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 2 -->
+<article class="flex flex-col bg-surface-container rounded-3xl p-space-sm shadow-md transition-all">
+<!-- Media Frame with 9:16 vertical ratio -->
+<div class="relative w-full aspect-[9/16] max-h-[460px] rounded-2xl overflow-hidden bg-surface-container-lowest flex items-center justify-center group">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Vertical 9:16 video snapshot featuring a tech entrepreneur pointing at an illustrated chart showing startup runway death curves, dramatic studio lighting with amber highlights and cyan rim accents, vibrant yellow boxed animated subtitle displaying 'NEVER HIRE BEFORE THIS STAGE'." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_vVIVkmRtyOkswsMg71yLuddwT0_cJNB1M6Ti6rq17637ighme6VX9rZsf596smIQcDiSbJ1MtGLDwhk_EYbWAuZ1zmCZ2ds7MtGq6F6gNlfR7lZGPC2QribIBGEyrrY-yfGHCa-QExish2VSUdji5xPMKVZq-DBmjYyC6-OuWHjPokHRYyhyukipUo-tC0bjOJmTG7-aAjFljaYeQzSCYHYRTfG7naJ5WPe2qLfU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-surface-container-lowest/40 pointer-events-none"></div>
+<!-- Top Badges Row -->
+<div class="absolute top-space-sm inset-x-space-sm flex items-center justify-between z-10">
+<label class="flex items-center gap-1.5 bg-surface-container-lowest/70 backdrop-blur-md px-2.5 py-1 rounded-full cursor-pointer">
+<input checked="" class="short-selector w-4 h-4 rounded accent-primary bg-surface cursor-pointer" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Selected</span>
+</label>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">bolt</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide">94% Viral Potential</span>
+</div>
+</div>
+<!-- Simulated Caption -->
+<div class="absolute bottom-16 inset-x-4 flex flex-col items-center text-center pointer-events-none z-10">
+<span class="px-2.5 py-1 rounded bg-black/85 text-yellow-300 text-title-md font-title-md uppercase tracking-tight shadow-md">
+            NEVER HIRE ⚠️
+          </span>
+<span class="mt-0.5 px-2 py-0.5 rounded bg-black/75 text-on-surface text-body-md font-semibold uppercase tracking-wide">
+            BEFORE THIS STAGE
+          </span>
+</div>
+<!-- Play Glassmorphic Button -->
+<button aria-label="Play Short 2" class="absolute z-10 w-14 h-14 rounded-full bg-surface-container/60 backdrop-blur-xl flex items-center justify-center text-on-surface shadow-xl hover:scale-110 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[32px] text-secondary translate-x-0.5" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="absolute bottom-0 inset-x-0 h-1 bg-surface-container-high/60 z-10">
+<div class="h-full w-1/4 bg-secondary rounded-full"></div>
+</div>
+</div>
+<!-- Card Meta Info -->
+<div class="pt-space-sm px-space-xs flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="min-w-0">
+<h2 class="font-title-md text-title-md text-on-surface truncate">The #1 Startup Trap to Avoid</h2>
+<div class="flex items-center gap-2 mt-0.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>0:35
+              </span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant text-[10px] font-medium">1080×1920 HD</span>
+<span>•</span>
+<span class="text-secondary font-medium">Hook: 0.6s</span>
+</div>
+</div>
+<button aria-label="Copy hook text" class="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-xl bg-surface-container-high text-on-surface-variant hover:text-on-surface active:bg-surface-bright transition-colors" title="Copy Hook Prompt" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<!-- Action Row -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<button class="min-h-[44px] rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">visibility</span>
+<span>Preview</span>
+</button>
+<button class="min-h-[44px] rounded-xl bg-primary-container hover:bg-primary-container/90 text-on-primary-fixed font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-md shadow-primary-container/20 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download Short</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 3 -->
+<article class="flex flex-col bg-surface-container rounded-3xl p-space-sm shadow-md transition-all">
+<!-- Media Frame with 9:16 vertical ratio -->
+<div class="relative w-full aspect-[9/16] max-h-[460px] rounded-2xl overflow-hidden bg-surface-container-lowest flex items-center justify-center group">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Vertical 9:16 video scene of a software executive walking through a futuristic dark neon-lit high-tech office talking enthusiastically to camera, glowing holographic charts in background, bold luminous cyan caption on screen reading 'HOW WE GOT 1M USERS IN 30 DAYS'." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSw2PG6eHu6jPkWgwxrHmffUJIQTAgNNOA5bnv0SKzcdm6me2elhgpD3IlojEz1oQnraSikvCERYI_xnemmy-1MhkIfUJQzrjeusdb1GD86GR-ZtU_FMjBTExJchD0JOTQtpQ3rbt1WEg94_EXQP0ZUcCqfQFBWFvytrB7mrufXnsD-9Q7rS6pG2QIrf81s1iJtAssYl2Z-rjt57qLM3qqXL9bUpT-L4Vl9C25-Nul"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-surface-container-lowest/40 pointer-events-none"></div>
+<!-- Top Badges Row -->
+<div class="absolute top-space-sm inset-x-space-sm flex items-center justify-between z-10">
+<label class="flex items-center gap-1.5 bg-surface-container-lowest/70 backdrop-blur-md px-2.5 py-1 rounded-full cursor-pointer">
+<input checked="" class="short-selector w-4 h-4 rounded accent-primary bg-surface cursor-pointer" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface">Selected</span>
+</label>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">trending_up</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide">91% Viral Potential</span>
+</div>
+</div>
+<!-- Simulated Caption -->
+<div class="absolute bottom-16 inset-x-4 flex flex-col items-center text-center pointer-events-none z-10">
+<span class="px-2.5 py-1 rounded bg-black/85 text-secondary text-title-md font-title-md uppercase tracking-tight shadow-md">
+            1M USERS 🚀
+          </span>
+<span class="mt-0.5 px-2 py-0.5 rounded bg-black/75 text-on-surface text-body-md font-semibold uppercase tracking-wide">
+            IN JUST 30 DAYS
+          </span>
+</div>
+<!-- Play Glassmorphic Button -->
+<button aria-label="Play Short 3" class="absolute z-10 w-14 h-14 rounded-full bg-surface-container/60 backdrop-blur-xl flex items-center justify-center text-on-surface shadow-xl hover:scale-110 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[32px] text-secondary translate-x-0.5" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="absolute bottom-0 inset-x-0 h-1 bg-surface-container-high/60 z-10">
+<div class="h-full w-3/5 bg-secondary rounded-full"></div>
+</div>
+</div>
+<!-- Card Meta Info -->
+<div class="pt-space-sm px-space-xs flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="min-w-0">
+<h2 class="font-title-md text-title-md text-on-surface truncate">Growth Hacking in 2025</h2>
+<div class="flex items-center gap-2 mt-0.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>0:54
+              </span>
+<span>•</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant text-[10px] font-medium">1080×1920 HD</span>
+<span>•</span>
+<span class="text-secondary font-medium">Hook: 0.9s</span>
+</div>
+</div>
+<button aria-label="Copy hook text" class="min-h-[44px] min-w-[44px] flex items-center justify-center rounded-xl bg-surface-container-high text-on-surface-variant hover:text-on-surface active:bg-surface-bright transition-colors" title="Copy Hook Prompt" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<!-- Action Row -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<button class="min-h-[44px] rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">visibility</span>
+<span>Preview</span>
+</button>
+<button class="min-h-[44px] rounded-xl bg-primary-container hover:bg-primary-container/90 text-on-primary-fixed font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-md shadow-primary-container/20 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download Short</span>
+</button>
+</div>
+</div>
+</article>
+</section>
+<!-- Export Settings Micro Drawer / Info Box -->
+<section class="mt-space-lg p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">tune</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Smart Export Settings</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Default 60 FPS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+      Rendered with AI smart framing (keeps faces centered) &amp; automatic silence trimmers for maximum retention.
+    </p>
+</section>
+<!-- Sticky Quick Summary & Batch Download Bar -->
+<div class="fixed bottom-16 inset-x-0 z-40 px-margin py-space-sm bg-surface-container-lowest/90 backdrop-blur-xl shadow-2xl flex items-center justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface font-medium" id="selected-count">3 of 3 selected</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Approx. 42.4 MB total</span>
+</div>
+<button class="min-h-[46px] px-space-md rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary-fixed font-title-md text-title-md flex items-center justify-center gap-2 shadow-md shadow-primary/20 active:scale-95 transition-transform flex-shrink-0" id="batch-download-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Download Selected</span>
+</button>
+</div>
+</div>
+<script>
+  (function initClipResults() {
+    const checkboxes = document.querySelectorAll('.short-selector');
+    const selectedCountLabel = document.getElementById('selected-count');
+    const batchDownloadBtn = document.getElementById('batch-download-btn');
+    const captionChips = document.querySelectorAll('.caption-chip');
+
+    // Handle check updates
+    function updateSelectionState() {
+      const total = checkboxes.length;
+      const checked = Array.from(checkboxes).filter(cb => cb.checked).length;
+      if (selectedCountLabel) {
+        selectedCountLabel.textContent = `${checked} of ${total} selected`;
+      }
+      if (batchDownloadBtn) {
+        if (checked === 0) {
+          batchDownloadBtn.setAttribute('disabled', 'true');
+          batchDownloadBtn.classList.add('opacity-50', 'pointer-events-none');
+        } else {
+          batchDownloadBtn.removeAttribute('disabled');
+          batchDownloadBtn.classList.remove('opacity-50', 'pointer-events-none');
+        }
+      }
+    }
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', updateSelectionState);
+    });
+
+    // Caption chip switching interaction
+    captionChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        captionChips.forEach(c => {
+          c.classList.remove('active', 'bg-surface-container-highest', 'ring-1', 'ring-primary/40');
+          c.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        chip.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        chip.classList.add('active', 'bg-surface-container-highest', 'ring-1', 'ring-primary/40', 'text-on-surface');
+      });
+    });
+
+    // Feedback on Hook Copy button
+    document.querySelectorAll('[title="Copy Hook Prompt"]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const icon = btn.querySelector('.material-symbols-outlined');
+        if (icon) {
+          const original = icon.textContent;
+          icon.textContent = 'check';
+          icon.classList.add('text-secondary');
+          setTimeout(() => {
+            icon.textContent = original;
+            icon.classList.remove('text-secondary');
+          }, 1500);
+        }
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.08)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-md"><a class="flex flex-col items-center justify-center min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors group" data-path="forge-studio" href="#"><span class="material-symbols-outlined text-[24px]">auto_awesome</span><span class="font-label-sm text-label-sm mt-0.5">Studio</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-h-[44px] min-w-[44px] transition-colors group text-secondary" data-path="clips-library" href="#"><span class="material-symbols-outlined text-[24px]">video_library</span><span class="font-label-sm text-label-sm mt-0.5">Clips</span></a><a class="flex flex-col items-center justify-center min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors group" data-path="settings-profile" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-sm text-label-sm mt-0.5">Account</span></a></div></nav></body></html>

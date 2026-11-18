@@ -1,0 +1,22 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Noto Sans,72,&H00FFFFFF,&H00F6D74C,&H000C0E17,&H880C0E17,-1,0,0,0,100,100,1,0,1,6,2,2,72,72,270,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.73,Default,,0,0,0,,{\fscx88\fscy88\t(0,90,\fscx103\fscy103)}HOW {\c&H00F6D74C\fscx110\fscy110}FOUNDERS{\r} SCALE
+Dialogue: 0,0:00:01.73,0:00:03.46,Default,,0,0,0,,{\fscx88\fscy88\t(0,90,\fscx103\fscy103)}FROM {\c&H00F6D74C\fscx110\fscy110}ZERO{\r} TO
+Dialogue: 0,0:00:03.46,0:00:05.19,Default,,0,0,0,,{\fscx88\fscy88\t(0,90,\fscx103\fscy103)}A {\c&H00F6D74C\fscx110\fscy110}$10M{\r} SAAS
+Dialogue: 0,0:00:05.19,0:00:06.92,Default,,0,0,0,,{\fscx88\fscy88\t(0,90,\fscx103\fscy103)}PLAYBOOK {\c&H00F6D74C\fscx110\fscy110}IN{\r} RECORD
+Dialogue: 0,0:00:06.92,0:00:07.50,Default,,0,0,0,,{\fscx88\fscy88\t(0,90,\fscx103\fscy103)}{\c&H00F6D74C\fscx110\fscy110}TIME.{\r}
+Dialogue: 0,0:00:07.50,0:00:09.75,Default,,0,0,0,,{\fscx88\fscy88\t(0,90,\fscx103\fscy103)}LOCK {\c&H00F6D74C\fscx110\fscy110}IN{\r} REPEATABLE
+Dialogue: 0,0:00:09.75,0:00:12.00,Default,,0,0,0,,{\fscx88\fscy88\t(0,90,\fscx103\fscy103)}DISTRIBUTION {\c&H00F6D74C\fscx110\fscy110}CHANNELS{\r} BEFORE
+Dialogue: 0,0:00:12.00,0:00:14.25,Default,,0,0,0,,{\fscx88\fscy88\t(0,90,\fscx103\fscy103)}EXPANDING {\c&H00F6D74C\fscx110\fscy110}YOUR{\r} PRODUCT
+Dialogue: 0,0:00:14.25,0:00:15.00,Default,,0,0,0,,{\fscx88\fscy88\t(0,90,\fscx103\fscy103)}{\c&H00F6D74C\fscx110\fscy110}SCOPE.{\r}

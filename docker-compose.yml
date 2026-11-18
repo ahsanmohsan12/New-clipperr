@@ -1,0 +1,28 @@
+services:
+  clipforge:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - DATABASE_URL=postgresql://clipforge:clipforge@postgres:5432/clipforge
+    volumes:
+      - clipforge_storage:/app/storage
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=clipforge
+      - POSTGRES_PASSWORD=clipforge
+      - POSTGRES_DB=clipforge
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
+
+volumes:
+  clipforge_storage:
+  pg_data:

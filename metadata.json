@@ -1,0 +1,8 @@
+{
+  "name": "ClipForge AI",
+  "description": "AI-powered video-to-shorts platform that turns long-form videos into viral 9:16 Shorts with synchronized captions, sound design, and smart vertical reframing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
