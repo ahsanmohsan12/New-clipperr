@@ -9,13 +9,11 @@ export interface RuntimeCapabilities {
   storage: {
     activeDriver: 'local';
     s3Configured: boolean;
-    bucket: string | null;
-    endpoint: string | null;
     note: string;
   };
   mediaIngest: {
     enabled: boolean;
-    source: 'env' | 'yt-dlp' | 'disabled';
+    source: 'yt-dlp' | 'direct-upload-only';
     command: string | null;
   };
   ai: {
@@ -36,11 +34,6 @@ export function isConfiguredSecret(value: string | undefined): boolean {
   return trimmed.length > 0 && !PLACEHOLDER_VALUES.has(trimmed);
 }
 
-export function resolveMediaIngestEnv(env: NodeJS.ProcessEnv = process.env): string | null {
-  const cmd = env.MEDIA_INGEST_CMD?.trim() || env.MEDIA_INGEST?.trim() || '';
-  return cmd.length > 0 ? cmd : null;
-}
-
 export function checkBinaryOnPath(cmd: string): Promise<boolean> {
   return new Promise((resolve) => {
     const checker = process.platform === 'win32' ? 'where' : 'which';
@@ -50,14 +43,13 @@ export function checkBinaryOnPath(cmd: string): Promise<boolean> {
   });
 }
 
-export function getSyncRuntimeConfig(env: NodeJS.ProcessEnv = process.env): Omit<RuntimeCapabilities, 'mediaIngest'> & {
-  mediaIngestEnvCommand: string | null;
-} {
+export function getSyncRuntimeConfig(
+  env: NodeJS.ProcessEnv = process.env,
+): Omit<RuntimeCapabilities, 'mediaIngest'> {
   const databaseUrlConfigured = isConfiguredSecret(env.DATABASE_URL);
   const bucket = env.S3_BUCKET?.trim() || null;
   const endpoint = env.S3_ENDPOINT?.trim() || null;
   const s3Configured = Boolean(bucket && endpoint);
-  const mediaIngestEnvCommand = resolveMediaIngestEnv(env);
 
   return {
     database: {
@@ -70,13 +62,10 @@ export function getSyncRuntimeConfig(env: NodeJS.ProcessEnv = process.env): Omit
     storage: {
       activeDriver: 'local',
       s3Configured,
-      bucket,
-      endpoint,
       note: s3Configured
         ? 'S3 settings detected; local filesystem storage (./storage) remains active for zero-dependency video rendering.'
         : 'Using local filesystem storage (./storage) with zero cloud bucket setup.',
     },
-    mediaIngestEnvCommand,
     ai: {
       geminiConfigured: isConfiguredSecret(env.GEMINI_API_KEY),
     },
@@ -87,32 +76,22 @@ export async function detectRuntimeCapabilities(
   env: NodeJS.ProcessEnv = process.env,
 ): Promise<RuntimeCapabilities> {
   const syncCfg = getSyncRuntimeConfig(env);
-  let mediaIngest: RuntimeCapabilities['mediaIngest'];
-
-  if (syncCfg.mediaIngestEnvCommand) {
-    mediaIngest = {
-      enabled: true,
-      source: 'env',
-      command: syncCfg.mediaIngestEnvCommand,
-    };
-  } else if (await checkBinaryOnPath('yt-dlp')) {
-    mediaIngest = {
-      enabled: true,
-      source: 'yt-dlp',
-      command: 'yt-dlp',
-    };
-  } else {
-    mediaIngest = {
-      enabled: false,
-      source: 'disabled',
-      command: null,
-    };
-  }
+  const hasYtDlp = await checkBinaryOnPath('yt-dlp');
 
   return {
     database: syncCfg.database,
     storage: syncCfg.storage,
-    mediaIngest,
+    mediaIngest: hasYtDlp
+      ? {
+          enabled: true,
+          source: 'yt-dlp',
+          command: 'yt-dlp',
+        }
+      : {
+          enabled: false,
+          source: 'direct-upload-only',
+          command: null,
+        },
     ai: syncCfg.ai,
   };
 }

@@ -5,7 +5,7 @@ import { pipeline as streamPipeline } from 'stream/promises';
 import { Readable } from 'stream';
 import type { SourcePlatform, UrlInspectionResult } from '../src/shared/types.ts';
 import { detectUrlPlatform, SAMPLE_VIDEOS } from '../src/shared/validation.ts';
-import { checkBinaryOnPath, resolveMediaIngestEnv } from './config.ts';
+import { checkBinaryOnPath } from './config.ts';
 import { UPLOADS_DIR } from './db.ts';
 import { ensureSampleVideo } from './sampleGenerator.ts';
 
@@ -53,7 +53,7 @@ export async function inspectVideoUrl(rawUrl: string): Promise<UrlInspectionResu
     };
   }
 
-  const hasYtDlp = Boolean(resolveMediaIngestEnv()) || (await checkBinaryOnPath('yt-dlp'));
+  const hasYtDlp = await checkBinaryOnPath('yt-dlp');
 
   if (detected.platform === 'youtube') {
     const meta = await fetchYoutubeOembed(detected.normalizedUrl);
@@ -67,7 +67,7 @@ export async function inspectVideoUrl(rawUrl: string): Promise<UrlInspectionResu
       canDirectIngest: hasYtDlp,
       restrictionReason: hasYtDlp
         ? undefined
-        : 'Direct YouTube stream downloading is restricted in this sandbox without an authorized yt-dlp / MEDIA_INGEST_CMD worker. Please upload an authorized MP4/MOV file directly, paste a direct MP4 URL, or try a built-in sample.',
+        : 'Direct YouTube stream downloading is restricted here. Please upload your authorized MP4/MOV/WebM file directly, paste a direct .mp4 URL, or try a built-in sample.',
     };
   }
 
@@ -82,7 +82,7 @@ export async function inspectVideoUrl(rawUrl: string): Promise<UrlInspectionResu
       canDirectIngest: hasYtDlp,
       restrictionReason: hasYtDlp
         ? undefined
-        : `Automated downloading from ${detected.platform} requires an authorized MEDIA_INGEST_CMD / yt-dlp worker. Upload an authorized MP4 file or paste a direct video URL.`,
+        : `Direct downloading from ${detected.platform} is restricted without a local yt-dlp CLI. Upload your authorized MP4/MOV/WebM file directly or paste a direct video URL.`,
     };
   }
 
@@ -129,13 +129,12 @@ export async function acquireSourceVideo(
 
   const destPath = path.join(UPLOADS_DIR, `${projectId}_source.mp4`);
 
-  // Check if third-party platform requires external downloader
+  // Check if third-party platform requires local yt-dlp CLI
   if (platform === 'youtube' || platform === 'tiktok' || platform === 'twitch') {
-    const customCmd = resolveMediaIngestEnv();
-    const bin = customCmd || ((await checkBinaryOnPath('yt-dlp')) ? 'yt-dlp' : '');
+    const bin = (await checkBinaryOnPath('yt-dlp')) ? 'yt-dlp' : '';
     if (!bin) {
       throw new Error(
-        `Source platform (${platform}) restricts direct downloading without an authorized downloader binary (yt-dlp / MEDIA_INGEST_CMD). Upload your authorized MP4/MOV file directly or paste a direct video URL.`,
+        `Source platform (${platform}) restricts direct stream downloading. Upload your authorized MP4/MOV/WebM file directly or paste a direct video file URL.`,
       );
     }
 

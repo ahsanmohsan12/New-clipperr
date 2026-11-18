@@ -57,7 +57,8 @@ Application startup **never blocks** when these optional variables are unset:
 | --- | --- | --- | --- |
 | `DATABASE_URL` | PostgreSQL connection string for multi-instance production deployments | Local SQLite (`./storage/clipforge.db`) | Provision PostgreSQL 16+, apply `db/schema.sql`, and pass `DATABASE_URL=postgresql://user:pass@host:5432/clipforge`. |
 | `S3_BUCKET` & `S3_ENDPOINT` | S3-compatible object storage (AWS S3, Cloudflare R2, MinIO) for shared cloud media archival | Local filesystem (`./storage/`) | Create a bucket in S3/R2/MinIO and configure `S3_BUCKET` and `S3_ENDPOINT` when integrating shared object storage. |
-| `MEDIA_INGEST` / `MEDIA_INGEST_CMD` | Authorized downloader binary (e.g. `yt-dlp`) for third-party streaming URLs (YouTube/TikTok/Twitch) | Direct MP4 uploads, direct `.mp4` URLs, and sample videos work out of the box; platform URLs show oEmbed metadata and prompt for upload | Install `yt-dlp` (`pipx install yt-dlp` or `brew install yt-dlp`) and optionally set `MEDIA_INGEST=yt-dlp` (only for content you are authorized to download). |
+
+Direct video file uploads (`MP4`/`MOV`/`WebM`/`MKV`), direct `.mp4` HTTP URLs, and sample videos are ingested and processed natively using Node streams and local `ffmpeg`/`ffprobe` with zero external download service required.
 
 ---
 
